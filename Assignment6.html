@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Assignment 6 - jsFiddle demo by babithareddy</title>
+  
+  <script type='text/javascript' src='//code.jquery.com/jquery-2.1.0.js'></script>
+  
+  
+  
+  
+  <script type="text/javascript" src="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+  
+  <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  
+  <script type="text/javascript" src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+  <style type='text/css'>
+    .bs-example{
+    	margin: 20px;
+    }
+
+.inputstyle{
+    width=20% ;
+}
+.login
+{
+   color:blue;
+    font-size:100%;
+}
+table, th, td {
+   border: 1px solid black;
+     padding: 15px;
+}
+
+  </style>
+  
+</head>
+<body>
+  <div data-role="page" id="newpage">
+    <h3>Lab Tutorial</h3>
+    <div class="bs-example">
+    <div class="panel panel-default">
+        <div class="panel-heading">Login Page</div>
+		<div class="panel-body">
+			<p>Please give username & password and click submit !</p>
+		</div>
+      <div style="width:30%">
+            <p>User Name:    <input id="username"  class="form-control"/>
+           <p id="write"></p></p> 
+            <p>Password:  <input class="inputstyle" /></p> 
+        
+        <p><a class="btn btn-default" href="#ButtonEventPage" data-role="button" onclick="getDetails()">Sign-in </a>
+        </p>
+         
+        </div>
+       
+
+        </div>
+     </div>
+  
+</div>
+<div data-role="page"  id="ButtonEventPage">
+    <div data-role="header">
+       <a class="btn btn-default" href="#newpage" data-role="button">Home </a>
+        
+        <h2>Home page</h2>
+          
+    </div>
+  
+    <h4> <p class="login"></p>
+    
+    </h4>
+      
+    </div>
+    
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+function getLogin(username)
+{
+ $.ajax({
+ url: 'http://kc-sce-cs551-2.kc.umkc.edu/aspnet_client/EPG7/WCFBabitha/WCFBabitha/Service1.svc/GetLoginData/login/'+username,
+  dataType: 'json',
+  data: 'url',
+  success: function(data) {
+    var  userid,password;
+    userid = data.userid;
+      password= data.password;
+      $('p.login').html("Welcome " + userid + ",  Your password is " + password); 
+
+  }
+});
+}
+
+
+function getDetails() {
+   
+    var username = document.getElementById('username').value;
+      getLogin(username);
+  
+}
+
+//]]>  
+
+</script>
+
+
+</body>
+
+
+</html>
+

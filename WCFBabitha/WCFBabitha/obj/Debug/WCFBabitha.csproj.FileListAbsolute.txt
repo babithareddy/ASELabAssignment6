@@ -1,0 +1,6 @@
+c:\users\babithareddy\documents\visual studio 2015\Projects\WCFBabitha\WCFBabitha\bin\WCFBabitha.dll.config
+c:\users\babithareddy\documents\visual studio 2015\Projects\WCFBabitha\WCFBabitha\bin\WCFBabitha.dll
+c:\users\babithareddy\documents\visual studio 2015\Projects\WCFBabitha\WCFBabitha\bin\WCFBabitha.pdb
+c:\users\babithareddy\documents\visual studio 2015\Projects\WCFBabitha\WCFBabitha\obj\Debug\WCFBabitha.csprojResolveAssemblyReference.cache
+c:\users\babithareddy\documents\visual studio 2015\Projects\WCFBabitha\WCFBabitha\obj\Debug\WCFBabitha.dll
+c:\users\babithareddy\documents\visual studio 2015\Projects\WCFBabitha\WCFBabitha\obj\Debug\WCFBabitha.pdb
